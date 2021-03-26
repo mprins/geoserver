@@ -15,7 +15,7 @@ import java.awt.image.RenderedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import javax.imageio.ImageIO;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONObject;
 import org.geoserver.data.test.SystemTestData;
 import org.geoserver.gsr.controller.ControllerTest;
 import org.geotools.image.test.ImageAssert;

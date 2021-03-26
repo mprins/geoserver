@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import javax.xml.namespace.QName;
-import net.sf.json.util.JSONBuilder;
+import org.kordamp.json.util.JSONBuilder;
 import org.geoserver.catalog.FeatureTypeInfo;
 import org.geoserver.config.GeoServer;
 import org.geoserver.data.util.TemporalUtils;

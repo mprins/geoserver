@@ -15,8 +15,8 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.util.UUID;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONArray;
+import org.kordamp.json.JSONObject;
 import org.geoserver.geofence.GeofenceBaseTest;
 import org.geoserver.geofence.core.dao.DuplicateKeyException;
 import org.geoserver.geofence.core.model.LayerAttribute;

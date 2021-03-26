@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
-import net.sf.json.*;
+import org.kordamp.json.*;
 import org.apache.commons.io.IOUtils;
 import org.geoserver.gsr.model.GSRModel;
 import org.geoserver.gsr.model.feature.Feature;

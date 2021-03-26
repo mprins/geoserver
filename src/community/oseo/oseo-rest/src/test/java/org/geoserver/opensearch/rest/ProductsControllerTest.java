@@ -37,7 +37,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 import javax.imageio.ImageIO;
 import net.minidev.json.JSONArray;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONObject;
 import org.apache.commons.io.IOUtils;
 import org.geoserver.catalog.DataStoreInfo;
 import org.geoserver.opensearch.eo.store.OpenSearchAccess;

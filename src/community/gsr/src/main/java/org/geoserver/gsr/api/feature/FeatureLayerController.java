@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import net.sf.json.*;
+import org.kordamp.json.*;
 import org.geoserver.catalog.FeatureTypeInfo;
 import org.geoserver.catalog.LayerInfo;
 import org.geoserver.config.GeoServer;

@@ -8,8 +8,8 @@ import static org.geoserver.rest.RestBaseController.ROOT_PATH;
 import static org.junit.Assert.assertEquals;
 
 import java.io.File;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONArray;
+import org.kordamp.json.JSONObject;
 import org.geoserver.importer.Directory;
 import org.geoserver.importer.ImporterTestSupport;
 import org.junit.Before;

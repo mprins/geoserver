@@ -13,8 +13,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONArray;
+import org.kordamp.json.JSONObject;
 import org.geoserver.gsr.JsonSchemaTest;
 import org.geoserver.gsr.controller.ControllerTest;
 import org.junit.Test;

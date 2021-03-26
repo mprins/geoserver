@@ -6,7 +6,7 @@ package org.geoserver.ows;
 import com.google.common.collect.ImmutableList;
 import java.util.Collections;
 import java.util.UUID;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONObject;
 import org.geoserver.platform.Operation;
 import org.geoserver.platform.Service;
 import org.geotools.factory.CommonFactoryFinder;

@@ -8,8 +8,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONArray;
+import org.kordamp.json.JSONObject;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.annotation.DirtiesContext;

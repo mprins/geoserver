@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONObject;
 import org.apache.commons.codec.Charsets;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.MediaType;

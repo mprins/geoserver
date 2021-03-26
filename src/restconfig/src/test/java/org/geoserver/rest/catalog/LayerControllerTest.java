@@ -18,7 +18,6 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
-import net.sf.json.JSONObject;
 import org.geoserver.catalog.Catalog;
 import org.geoserver.catalog.LayerInfo;
 import org.geoserver.catalog.ResourceInfo;
@@ -28,6 +27,7 @@ import org.geoserver.rest.RestBaseController;
 import org.hamcrest.CoreMatchers;
 import org.junit.After;
 import org.junit.Test;
+import org.kordamp.json.JSONObject;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.w3c.dom.Document;

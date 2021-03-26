@@ -47,7 +47,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.sf.json-lib</groupId>
+			<groupId>org.kordamp.json-lib</groupId>
 			<artifactId>json-lib</artifactId>
 		</dependency>
 		<dependency>

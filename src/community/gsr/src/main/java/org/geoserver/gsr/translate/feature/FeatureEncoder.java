@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONObject;
 import org.geoserver.catalog.FeatureTypeInfo;
 import org.geoserver.gsr.model.feature.*;
 import org.geoserver.gsr.model.geometry.*;

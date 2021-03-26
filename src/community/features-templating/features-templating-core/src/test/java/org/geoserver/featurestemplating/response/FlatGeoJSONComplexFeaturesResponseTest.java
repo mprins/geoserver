@@ -7,7 +7,7 @@ package org.geoserver.featurestemplating.response;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONObject;
 import org.geoserver.featurestemplating.configuration.TemplateIdentifier;
 import org.springframework.test.annotation.DirtiesContext;
 
