@@ -9,8 +9,8 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.InputStream;
-import net.sf.json.JSON;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSON;
+import org.kordamp.json.JSONObject;
 import org.apache.commons.io.FileUtils;
 import org.geoserver.config.GeoServerDataDirectory;
 import org.geoserver.test.GeoServerSystemTestSupport;

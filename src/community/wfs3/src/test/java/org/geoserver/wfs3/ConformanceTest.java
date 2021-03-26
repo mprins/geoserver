@@ -4,7 +4,7 @@
  */
 package org.geoserver.wfs3;
 
-import net.sf.json.JSON;
+import org.kordamp.json.JSON;
 import org.junit.Test;
 import org.w3c.dom.Document;
 

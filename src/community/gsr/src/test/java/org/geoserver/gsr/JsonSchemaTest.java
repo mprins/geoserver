@@ -12,8 +12,8 @@ package org.geoserver.gsr;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
-import net.sf.json.JSON;
-import net.sf.json.JSONSerializer;
+import org.kordamp.json.JSON;
+import org.kordamp.json.JSONSerializer;
 import org.geoserver.gsr.api.GeoServicesJacksonJsonConverter;
 import org.geoserver.gsr.validation.JSONValidator;
 

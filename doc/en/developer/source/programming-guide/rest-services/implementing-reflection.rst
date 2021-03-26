@@ -158,8 +158,8 @@ Test
 
       ...
 
-      import net.sf.json.JSON;
-      import net.sf.json.JSONObject;
+      import org.kordamp.json.JSON;
+      import org.kordamp.json.JSONObject;
 
       ...
 

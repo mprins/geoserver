@@ -12,9 +12,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.logging.Logger;
 import net.razorvine.pickle.PickleException;
-import net.sf.json.JSONNull;
-import net.sf.json.JSONObject;
-import net.sf.json.JSONSerializer;
+import org.kordamp.json.JSONNull;
+import org.kordamp.json.JSONObject;
+import org.kordamp.json.JSONSerializer;
 import org.geotools.util.logging.Logging;
 
 /**

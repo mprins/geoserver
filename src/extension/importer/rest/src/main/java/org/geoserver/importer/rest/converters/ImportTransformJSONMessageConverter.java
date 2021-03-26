@@ -6,7 +6,7 @@ package org.geoserver.importer.rest.converters;
 
 import java.io.IOException;
 import java.io.InputStream;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONObject;
 import org.geoserver.importer.ImportTask;
 import org.geoserver.importer.Importer;
 import org.geoserver.importer.transform.ImportTransform;

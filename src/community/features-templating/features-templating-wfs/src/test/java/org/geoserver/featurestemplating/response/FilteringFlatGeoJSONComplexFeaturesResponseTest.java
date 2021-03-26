@@ -6,8 +6,8 @@ package org.geoserver.featurestemplating.response;
 
 import static org.junit.Assert.assertEquals;
 
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONArray;
+import org.kordamp.json.JSONObject;
 import org.geoserver.featurestemplating.configuration.TemplateIdentifier;
 import org.junit.Test;
 import org.springframework.test.annotation.DirtiesContext;

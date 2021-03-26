@@ -8,8 +8,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.util.Map;
-import net.sf.json.JSONObject;
-import net.sf.json.JSONSerializer;
+import org.kordamp.json.JSONObject;
+import org.kordamp.json.JSONSerializer;
 import org.apache.commons.io.IOUtils;
 import org.junit.Before;
 import org.junit.Test;

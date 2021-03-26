@@ -6,8 +6,8 @@ package org.geoserver.wfs3.response;
 
 import java.io.Writer;
 import javax.measure.Unit;
-import net.sf.json.JSONException;
-import net.sf.json.util.JSONBuilder;
+import org.kordamp.json.JSONException;
+import org.kordamp.json.util.JSONBuilder;
 import org.geoserver.wfs.json.GeoJSONBuilder;
 import org.locationtech.jts.geom.Geometry;
 import org.locationtech.jts.geom.PrecisionModel;

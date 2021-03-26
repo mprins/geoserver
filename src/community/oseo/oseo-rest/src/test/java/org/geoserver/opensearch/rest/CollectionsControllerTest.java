@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONObject;
 import org.apache.commons.io.IOUtils;
 import org.geoserver.opensearch.rest.CollectionsController.CollectionPart;
 import org.geoserver.rest.util.MediaTypeExtensions;

@@ -18,9 +18,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 import java.util.List;
-import net.sf.json.JSONObject;
-import net.sf.json.util.JSONBuilder;
-import net.sf.json.util.JSONStringer;
+import org.kordamp.json.JSONObject;
+import org.kordamp.json.util.JSONBuilder;
+import org.kordamp.json.util.JSONStringer;
 import org.geoserver.catalog.StyleInfo;
 import org.geoserver.gsr.controller.ControllerTest;
 import org.geoserver.gsr.model.font.Font;

@@ -14,7 +14,7 @@ import com.google.gson.Gson;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.logging.Logger;
-import net.sf.json.*;
+import org.kordamp.json.*;
 import org.apache.commons.io.IOUtils;
 import org.geoserver.gsr.model.relationship.RelationshipClass;
 import org.geoserver.gsr.model.relationship.RelationshipClassWrapper;

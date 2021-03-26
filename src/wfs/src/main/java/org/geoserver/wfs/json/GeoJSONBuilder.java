@@ -9,10 +9,10 @@ import java.io.Writer;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
-import net.sf.json.JSONException;
-import net.sf.json.util.JSONBuilder;
 import org.geotools.referencing.CRS;
 import org.geotools.util.Converters;
+import org.kordamp.json.JSONException;
+import org.kordamp.json.util.JSONBuilder;
 import org.locationtech.jts.geom.CoordinateSequence;
 import org.locationtech.jts.geom.Envelope;
 import org.locationtech.jts.geom.Geometry;
@@ -361,7 +361,7 @@ public class GeoJSONBuilder extends JSONBuilder {
      *
      * <p>Overrides the handling of java.util.Map, java.util.List, and Geometry objects as well.
      *
-     * @see net.sf.json.util.JSONBuilder#value(java.lang.Object)
+     * @see org.kordamp.json.util.JSONBuilder#value(java.lang.Object)
      */
     @Override
     public GeoJSONBuilder value(Object value) {

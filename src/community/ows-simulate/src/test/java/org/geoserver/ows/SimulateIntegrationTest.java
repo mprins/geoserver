@@ -7,8 +7,8 @@ import static org.geoserver.data.test.CiteTestData.BASIC_POLYGONS;
 import static org.geoserver.data.test.CiteTestData.POINTS;
 import static org.junit.Assert.assertEquals;
 
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
+import org.kordamp.json.JSONArray;
+import org.kordamp.json.JSONObject;
 import org.geoserver.test.GeoServerSystemTestSupport;
 import org.junit.Test;
 
