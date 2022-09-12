@@ -26,9 +26,12 @@ now = datetime.datetime.now()
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.todo']
+extensions = ['sphinx.ext.todo', 'sphinx_sitemap']
 
 todo_include_todos = True
+
+sitemap_filename = "sitemap-docs-en.xml"
+html_baseurl = 'https://geoserver.org/docs/en'
 
 # Add any paths that contain templates here, relative to this directory.
 #templates_path = ['../../theme/_templates']
