@@ -145,7 +145,7 @@
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header"><a href=".." title="GeoServer Documentation" class="md-header__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
       
-  <img src="../img/geoserver-logo.png" alt="logo">
+  <img src="../img/geoserver-logo.svg" alt="logo">
 
     </a><label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
@@ -368,7 +368,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -381,7 +383,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="GeoServer Documentation" class="md-nav__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
       
-  <img src="../img/geoserver-logo.png" alt="logo">
+  <img src="../img/geoserver-logo.svg" alt="logo">
 
     </a>
     GeoServer Documentation
@@ -944,14 +946,14 @@
   
   
     <li class="md-nav__item">
-      <a href="user/installation/upgrade/" class="md-nav__link">
+      <a href="user/installation/upgrade3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Upgrading GeoServer
+    Upgrading GeoServer 3
   
 
     
@@ -1578,14 +1580,14 @@
   
   
     <li class="md-nav__item">
-      <a href="user/data/webadmin/layerpreview/" class="md-nav__link">
+      <a href="user/data/webadmin/browselayers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Layer Preview
+    Browse Layers
   
 
     
@@ -26522,6 +26524,8 @@
       
         
       
+        
+      
     
     
     
@@ -27088,6 +27092,34 @@
     
   
     Setting up a JNDI connection pool with Tomcat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user/tutorials/tomcat-hardening/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tomcat hardening
   
 
     
@@ -29506,7 +29538,7 @@
   <span class="md-ellipsis">
     
   
-    Installing mkdocs
+    Installing MkDocs
   
 
     
@@ -29686,7 +29718,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -29710,6 +29744,8 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
@@ -29729,32 +29765,6 @@
 <a class="doc-card" href="docguide/"><img alt="✍" class="twemoji doc-card-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/270d.svg" title=":writing_hand:" /> <br/><span class="guide">Documentation Guide</span>Learn how to write and contribute to GeoServer documentation</a>
 <a class="doc-card" href="api/"><img alt="🔌" class="twemoji doc-card-icon" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f50c.svg" title=":electric_plug:" /> <br/><span class="guide">API Reference</span>Explore the REST API and service endpoints for programmatic access</a>
 </div>
-<div class="doc-cards">
-  <a href="user/" class="doc-card">
-    <div class="doc-card-icon">📖</div>
-    <h2>User Manual</h2>
-    <p>Learn how to install, configure, and use GeoServer for publishing geospatial data</p>
-  </a>
-
-  <a href="developer/" class="doc-card">
-    <div class="doc-card-icon">💻</div>
-    <h2>Developer Guide</h2>
-    <p>Contribute to GeoServer development with architecture guides and coding standards</p>
-  </a>
-
-  <a href="docguide/" class="doc-card">
-    <div class="doc-card-icon">✍️</div>
-    <h2>Documentation Guide</h2>
-    <p>Learn how to write and contribute to GeoServer documentation</p>
-  </a>
-
-  <a href="api/" class="doc-card">
-    <div class="doc-card-icon">🔌</div>
-    <h2>API Reference</h2>
-    <p>Explore the REST API and service endpoints for programmatic access</p>
-  </a>
-</div>
-
 <style>
 .doc-cards {
   display: grid;
@@ -29790,6 +29800,33 @@
   margin-bottom: 1rem;
   line-height: 1;
 }
+
+a.doc-card {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+}
+
+a.doc-card:link {
+  color: var(--md-default-fg-color--light);
+}
+a.doc-card:visted {
+  color: var(--md-default-fg-color--light);
+}
+a.doc-card:hover {
+  color: var(--md-default-fg-color--light);
+}
+
+a.doc-card span.guide {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  box-sizing: inherit;
+  color: var(--md-primary-fg-color);
+}
+
 
 .doc-card h2 {
   margin: 0.5rem 0;
@@ -29843,8 +29880,13 @@
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
