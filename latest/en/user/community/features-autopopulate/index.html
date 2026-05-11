@@ -25,7 +25,7 @@
     
     
       
-        <title>Features-Autopopulate Extension - GeoServer Documentation</title>
+        <title>Features-Autopopulate Extension - Documentation</title>
       
     
     
@@ -146,8 +146,12 @@
       </div>
     
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header"><a href="../../../.." title="GeoServer Documentation" class="md-header__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header"><a href="../../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../../img/geoserver-logo.svg" alt="logo">
 
@@ -157,7 +161,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GeoServer Documentation
+            Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -385,12 +389,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="GeoServer Documentation" class="md-nav__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
+    <a href="../../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../../img/geoserver-logo.svg" alt="logo">
 
     </a>
-    GeoServer Documentation
+    Documentation
   </label>
   
     <div class="md-nav__source">
@@ -21631,7 +21635,7 @@
   <span class="md-ellipsis">
     
   
-    Features Templatring Rest API
+    Features Templating Rest API
   
 
     
@@ -29784,12 +29788,12 @@
 <li>Update/insert into the <code>EDITOR</code> the current GeoServer user.</li>
 <li>Update/insert into the <code>LAST_UPDATE</code> the current timestamp</li>
 </ul>
-<p>We can leverage on two GeoServer <code>CQL Expressions</code> that allow us to get thos values at runtime</p>
+<p>We can leverage on two GeoServer <code>CQL Expressions</code> that allow us to get those values at runtime</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="na">EDITOR</span><span class="o">=</span><span class="s">env(&#39;GSUSER&#39;)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="na">LAST_UPDATE</span><span class="o">=</span><span class="s">now()</span>
 </code></pre></div>
 <p>The function <code>env('GSUSER')</code> reads the system environment for a variable named <code>GSUSER</code>, resolves the value and returns back the current logged-in username.</p>
-<p>This one is a special variable automatically created by GeoServer at <code>login</code> time and injected into the local environment (see <code>#EnviromentInjectionCallback</code> for more details)</p>
+<p>This one is a special variable automatically created by GeoServer at <code>login</code> time and injected into the local environment (see <code>#EnvironmentInjectionCallback</code> for more details)</p>
 <p>The function <code>now()</code> gets the current timestamp and returns back the date-time.</p>
 <p>What we need to do then is to create a file named <code>transactionCustomizer.properties</code> inside the folder <code>$GEOSERVER_DATADIR/workspaces/topp/states</code> with the current key-value pairs</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="na">EDITOR</span><span class="o">=</span><span class="s">env(&#39;GSUSER&#39;)</span>

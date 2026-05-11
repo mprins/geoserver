@@ -25,7 +25,7 @@
     
     
       
-        <title>HTTP Based Authorization configuration - GeoServer Documentation</title>
+        <title>HTTP Based Authorization configuration - Documentation</title>
       
     
     
@@ -146,8 +146,12 @@
       </div>
     
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header"><a href="../../../../.." title="GeoServer Documentation" class="md-header__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header"><a href="../../../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../../../img/geoserver-logo.svg" alt="logo">
 
@@ -157,7 +161,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GeoServer Documentation
+            Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -385,12 +389,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="GeoServer Documentation" class="md-nav__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
+    <a href="../../../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../../../img/geoserver-logo.svg" alt="logo">
 
     </a>
-    GeoServer Documentation
+    Documentation
   </label>
   
     <div class="md-nav__source">
@@ -21621,7 +21625,7 @@
   <span class="md-ellipsis">
     
   
-    Features Templatring Rest API
+    Features Templating Rest API
   
 
     
@@ -29780,7 +29784,7 @@
 <p>The <code>HTTP Based Authorization plug-in</code> will try to authenticate the user on an configured external authentication service. The username and the password will be sent to the service in one of the following ways:</p>
 <ul>
 <li>In a Header named <code>X-HTTP-AUTHORIZATION</code>.</li>
-<li>As a query parameters or as request path. For this use case the url needs to be configured by inseritng two placeholder, namely <code>{user}</code> and <code>{password}</code> , where the username and password are expected to be provided eg. <code>https://my-auth-service?username={username}&amp;password={password}</code>.</li>
+<li>As a query parameters or as request path. For this use case the url needs to be configured by inserting two placeholder, namely <code>{user}</code> and <code>{password}</code> , where the username and password are expected to be provided eg. <code>https://my-auth-service?username={username}&amp;password={password}</code>.</li>
 </ul>
 <p>The Authentication Provider will perform a <code>GET</code> request, sending credential Base64 encoded. If the response status returned by the external service is different from <code>200</code> the user will not be authenticated.</p>
 <p>In case the external authentication service is returning the authenticated user's roles in the response body, it is possible to define a regular expression to extract them, allowing for their usage for authorization. There is no limitation to a specific content type.</p>

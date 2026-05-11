@@ -25,7 +25,7 @@
     
     
       
-        <title>Labeling - GeoServer Documentation</title>
+        <title>Labeling - Documentation</title>
       
     
     
@@ -146,8 +146,12 @@
       </div>
     
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header"><a href="../../../../../.." title="GeoServer Documentation" class="md-header__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header"><a href="../../../../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../../../../img/geoserver-logo.svg" alt="logo">
 
@@ -157,7 +161,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GeoServer Documentation
+            Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -385,12 +389,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../.." title="GeoServer Documentation" class="md-nav__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
+    <a href="../../../../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../../../../img/geoserver-logo.svg" alt="logo">
 
     </a>
-    GeoServer Documentation
+    Documentation
   </label>
   
     <div class="md-nav__source">
@@ -22020,7 +22024,7 @@
   <span class="md-ellipsis">
     
   
-    Features Templatring Rest API
+    Features Templating Rest API
   
 
     
@@ -30639,7 +30643,7 @@
 <p><img alt="" src="../img/lp_2.png" /></p>
 <p><em>PerpendicularOffset = 10</em></p>
 <h2 id="composing-labels-from-multiple-attributes">Composing labels from multiple attributes<a class="headerlink" href="#composing-labels-from-multiple-attributes" title="Permanent link">&para;</a></h2>
-<p>The <code>&lt;Label&gt;</code> element in <code>&lt;TextSymbolizer&gt;</code> allows mixed content. This means its content can be a mixture of plain text and <a href="../pointsymbolizer/#using-expressions-in-parameter-values">Filter Expressions</a>. The mix gets interepreted as a concatenation. You can leverage this to create complex labels out of multiple attributes.</p>
+<p>The <code>&lt;Label&gt;</code> element in <code>&lt;TextSymbolizer&gt;</code> allows mixed content. This means its content can be a mixture of plain text and <a href="../pointsymbolizer/#using-expressions-in-parameter-values">Filter Expressions</a>. The mix gets interpreted as a concatenation. You can leverage this to create complex labels out of multiple attributes.</p>
 <p>For example, if you want both a state name and its abbreviation to appear in a label, you can do the following:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&lt;Label&gt;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">&lt;ogc:PropertyName&gt;</span>STATE_NAME<span class="nt">&lt;/ogc:PropertyName&gt;</span><span class="w"> </span>(<span class="nt">&lt;ogc:PropertyName&gt;</span>STATE_ABBR<span class="nt">&lt;/ogc:PropertyName&gt;</span>)
@@ -30757,7 +30761,7 @@ New York    |   8,107,916
 </code></pre></div>
 <h3 id="labeling_max_displacement">maxDisplacement<a class="headerlink" href="#labeling_max_displacement" title="Permanent link">&para;</a></h3>
 <p>The <code>maxDisplacement</code> option controls the displacement of the label along a line, around a point and inside a polygon.</p>
-<p>For lines, normally GeoServer labels a line at its center point only. If this label conflicts with another one it may not be displayed at all. When this option is enabled the labeller will attempt to avoid conflic by using an alternate location within <strong>maxDisplacement</strong> pixels along the line from the pre-computed label point.</p>
+<p>For lines, normally GeoServer labels a line at its center point only. If this label conflicts with another one it may not be displayed at all. When this option is enabled the labeller will attempt to avoid conflict by using an alternate location within <strong>maxDisplacement</strong> pixels along the line from the pre-computed label point.</p>
 <p>If used in conjunction with <a href="#labeling_repeat">repeat</a>, the value for <code>maxDisplacement</code> should always be <strong>lower</strong> than the value for <code>repeat</code>.</p>
 <p>For points this causes the renderer to start circling around the point in search of a empty stop to place the label, step by step increasing the size of the circle until the max displacement is reached. The same happens for polygons, around the polygon labelling point (normally the centroid).</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">&lt;VendorOption</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;maxDisplacement&quot;</span><span class="nt">&gt;</span>10<span class="nt">&lt;/VendorOption&gt;</span><span class="w"> </span>
@@ -30889,7 +30893,7 @@ New York    |   8,107,916
 <p>Some underlines examples:</p>
 <p><img alt="" src="../img/label_underlines.png" /></p>
 <h3 id="labeling_strikethrough_text">strikethroughText<a class="headerlink" href="#labeling_strikethrough_text" title="Permanent link">&para;</a></h3>
-<p>The <code>strikethroughText</code> option instruct the renderer to strikethrough labels. The strikethrough will work like a typical word processor text strikethrough. The thickness and position of the line will be defined by the font and color will be the same as the text. Spaces will also be stroken.</p>
+<p>The <code>strikethroughText</code> option instruct the renderer to strikethrough labels. The strikethrough will work like a typical word processor text strikethrough. The thickness and position of the line will be defined by the font and color will be the same as the text. Spaces will also be struck through.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nt">&lt;VendorOption</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;strikethroughText&quot;</span><span class="nt">&gt;</span>true<span class="nt">&lt;/VendorOption&gt;</span>
 </code></pre></div>
 <p>Some strikethrough examples:</p>

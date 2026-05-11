@@ -25,7 +25,7 @@
     
     
       
-        <title>Layers - GeoServer Documentation</title>
+        <title>Layers - Documentation</title>
       
     
     
@@ -146,8 +146,12 @@
       </div>
     
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header"><a href="../../../../.." title="GeoServer Documentation" class="md-header__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header"><a href="../../../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../../../img/geoserver-logo.svg" alt="logo">
 
@@ -157,7 +161,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GeoServer Documentation
+            Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -385,12 +389,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="GeoServer Documentation" class="md-nav__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
+    <a href="../../../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../../../img/geoserver-logo.svg" alt="logo">
 
     </a>
-    GeoServer Documentation
+    Documentation
   </label>
   
     <div class="md-nav__source">
@@ -21941,7 +21945,7 @@
   <span class="md-ellipsis">
     
   
-    Features Templatring Rest API
+    Features Templating Rest API
   
 
     
@@ -30599,7 +30603,13 @@
 <li><strong>Additional styles</strong>---Other styles that can be associated with this layer. Some clients (and the GeoServer Browse Layers page) will present those as styling alternatives for that layer to the user.</li>
 <li><strong>Default rendering buffer</strong>---Default value of the <code>buffer</code> GetMap/GetFeatureInfo vendor parameter. See the <a href="../../../services/wms/vendor/">WMS vendor parameters</a> for more details.</li>
 <li><strong>Default WMS path</strong>---Location of the layer in the WMS capabilities layer tree. Useful for building non-opaque layer groups</li>
-<li><strong>Default Interpolation Method</strong>---Allows to specify a default resampling (interpolation) method for this layer. The available options are <em>Nearest neighbor</em>, <em>Bilinear</em>, <em>Bicubic</em>, or <em>Use service default</em>, which means that no layer specific configuration will be created (the default interpolation method selected in the WMS service configuration page will be used, see <a href="../../../services/wms/webadmin/#services_webadmin_wms_raster_options">Raster Rendering Options</a> for details). Can be overridden by the <a href="../../../services/wms/vendor/#wms_vendor_parameter_interpolations">interpolations vendor parameter</a>.</li>
+<li>
+<p><strong>Default Interpolation Method</strong>---Allows to specify a default resampling (interpolation) method for this layer. The available options are <em>Nearest neighbor</em>, <em>Bilinear</em>, <em>Bicubic</em>, or <em>Use service default</em>, which means that no layer specific configuration will be created (the default interpolation method selected in the WMS service configuration page will be used, see <a href="../../../services/wms/webadmin/#services_webadmin_wms_raster_options">Raster Rendering Options</a> for details). Can be overridden by the <a href="../../../services/wms/vendor/#wms_vendor_parameter_interpolations">interpolations vendor parameter</a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>The default WMS interpolation configured at the layer level is also honored when the layer is served through GeoWebCache in <a href="../../../geowebcache/using/#geowebcache_endpoint_url">full WMS mode</a>. In this case, the interpolation setting is propagated to the tile recomposition process and influences the resampling performed when tiles are merged and scaled to produce the final image.</p>
+</li>
 </ul>
 <h3 id="wms-attribution">WMS Attribution<a class="headerlink" href="#wms-attribution" title="Permanent link">&para;</a></h3>
 <p>Sets publishing information about data providers.</p>

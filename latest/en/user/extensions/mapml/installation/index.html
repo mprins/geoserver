@@ -25,7 +25,7 @@
     
     
       
-        <title>Installation - GeoServer Documentation</title>
+        <title>Installation - Documentation</title>
       
     
     
@@ -146,8 +146,12 @@
       </div>
     
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header"><a href="../../../../.." title="GeoServer Documentation" class="md-header__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header"><a href="../../../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../../../img/geoserver-logo.svg" alt="logo">
 
@@ -157,7 +161,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GeoServer Documentation
+            Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -385,12 +389,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="GeoServer Documentation" class="md-nav__button md-logo" aria-label="GeoServer Documentation" data-md-component="logo">
+    <a href="../../../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../../../img/geoserver-logo.svg" alt="logo">
 
     </a>
-    GeoServer Documentation
+    Documentation
   </label>
   
     <div class="md-nav__source">
@@ -21633,7 +21637,7 @@
   <span class="md-ellipsis">
     
   
-    Features Templatring Rest API
+    Features Templating Rest API
   
 
     
@@ -29820,7 +29824,7 @@
 <li>MapML:CBMTILE (or EPSG:3978)</li>
 <li>MapML:APSTILE (or EPSG:5936)</li>
 </ul>
-<p>In addition, is it possible to configure custom TiledCRS based on the available WMTS GridSets. A new MapML TCRS Settings menu is available in the GeoServer UI on the Settings section:</p>
+<p>In addition, it is possible to configure custom TiledCRS based on the available WMTS GridSets. A new MapML TCRS Settings menu is available in the GeoServer UI on the Server &gt; MapML TCRS Settings section:</p>
 <p><img alt="" src="../images/mapml_tcrs_menu.png" /></p>
 <p>It provides a selector containing available GridSets. Administrator can select GridSets from the left list that will be converted to TiledCRSs.</p>
 <p><img alt="" src="../images/mapml_tcrs_selector.png" /></p>
@@ -29866,7 +29870,7 @@
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  <span class="p">&lt;</span><span class="nt">map-link</span> <span class="na">tref</span><span class="o">=</span><span class="s">&quot;http://localhost:8080/geoserver/tiger/wms?format_options=mapmlfeatures:true&amp;amp;request=GetMap&amp;amp;crs=MapML:WGS84&amp;amp;bbox={xmin},{ymin},{xmax},{ymax}&amp;amp;format=text/mapml&amp;amp;language=en&amp;amp;version=1.3.0&amp;amp;transparent=true&amp;amp;service=WMS&amp;amp;layers=poi&amp;amp;width={w}&amp;amp;styles=&amp;amp;height={h}&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;features&quot;</span><span class="p">/&gt;</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">&lt;/</span><span class="nt">map-extent</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>When both "Use Tiles" and "Use Features" are set in the FORMAT_OPTIONS parameter (<code>mapmlusefeatures:true;mapmlusetiles:true</code>), the MapML extension will request tiled maps in <code>text/mapml</code> format. The contents of the tiles will be clipped to the requested area, and feature attributes will be skiipped, as the MapML client cannot leverage them for the moment.</p>
+<p>When both "Use Tiles" and "Use Features" are set in the FORMAT_OPTIONS parameter (<code>mapmlusefeatures:true;mapmlusetiles:true</code>), the MapML extension will request tiled maps in <code>text/mapml</code> format. The contents of the tiles will be clipped to the requested area, and feature attributes will be skipped, as the MapML client cannot leverage them for the moment.</p>
 <h2 id="sub-layer-settings">Sub-layer Settings<a class="headerlink" href="#sub-layer-settings" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../images/mapml_sub_layer_settings.png" /></p>
 <p><em>The sub-layer settings checkbox is shown</em></p>
