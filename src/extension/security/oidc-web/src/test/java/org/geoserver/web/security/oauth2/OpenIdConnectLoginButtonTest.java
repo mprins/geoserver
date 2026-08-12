@@ -90,7 +90,7 @@ public class OpenIdConnectLoginButtonTest extends GeoServerWicketTestSupport {
 
         tester.startPage(GeoServerHomePage.class);
         String html = tester.getLastResponseAsString();
-        LOGGER.log(Level.INFO, "Last HTML page output:\n" + html);
+        LOGGER.info("Last HTML page output:\n" + html);
 
         // the login form is there and has the link
         assertTrue(html.contains(MARKUP_FORM));
@@ -104,7 +104,7 @@ public class OpenIdConnectLoginButtonTest extends GeoServerWicketTestSupport {
 
         tester.startPage(GeoServerHomePage.class);
         String html = tester.getLastResponseAsString();
-        LOGGER.log(Level.INFO, "Last HTML page output:\n" + html);
+        LOGGER.info("Last HTML page output:\n" + html);
 
         // the login form is there and has the link
         assertFalse(html.contains(MARKUP_FORM));
@@ -172,7 +172,7 @@ public class OpenIdConnectLoginButtonTest extends GeoServerWicketTestSupport {
 
         tester.startPage(GeoServerHomePage.class);
         String html = tester.getLastResponseAsString();
-        LOGGER.log(Level.INFO, "Last HTML page output:\n" + html);
+        LOGGER.info("Last HTML page output:\n" + html);
 
         // Both scoped login URLs must appear in the rendered HTML.
         assertTrue(

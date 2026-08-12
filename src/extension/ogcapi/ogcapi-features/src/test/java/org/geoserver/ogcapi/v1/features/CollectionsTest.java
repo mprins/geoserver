@@ -243,7 +243,7 @@ public class CollectionsTest extends FeaturesTestSupport {
             MockHttpServletResponse response = dispatch(request, null);
             assertEquals(200, response.getStatus());
             assertEquals("text/html", response.getContentType());
-            LOGGER.log(Level.INFO, "Last request returned\n:" + response.getContentAsString());
+            LOGGER.fine("Last request returned\n:" + response.getContentAsString());
 
             // parse the HTML
             org.jsoup.nodes.Document document = Jsoup.parse(response.getContentAsString());
