@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.geoserver.org/3.1.x/latest/en/user/community/gwc-sqlite/">
+        <link rel="canonical" href="https://docs.geoserver.org/3.1.x/latest/en/user/community/updates-checker/">
       
       
-        <link rel="prev" href="../gwc-mbtiles/">
+        <link rel="prev" href="../backuprestore/migration/">
       
       
-        <link rel="next" href="../hana/">
+        <link rel="next" href="../cog/">
       
       
         
       
       
       <link rel="icon" href="../../../../img/geoserver.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>GWC SQLite Plugin - Documentation</title>
+        <title>Check for Updates - Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -132,7 +132,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gwc-sqlite-plugin" class="md-skip">
+        <a href="#check-for-updates" class="md-skip">
           Skip to content
         </a>
       
@@ -182,7 +182,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GWC SQLite Plugin
+              Check for Updates
             
           </span>
         </div>
@@ -21472,6 +21472,225 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Check for Updates
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Check for Updates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-with-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing with Docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-the-feed-is-checked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the feed is checked
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dismissing-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dismissing notifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppressing-mitigated-advisories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppressing mitigated advisories
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-and-check-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status and Check Now
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REST endpoint
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="REST endpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suppressing-advisories-in-a-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppressing advisories in a request
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     
@@ -21498,7 +21717,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -21520,14 +21739,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_17_4" id="__nav_2_17_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_17_5" id="__nav_2_17_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_17_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -21743,7 +21962,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_9" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -21765,14 +21984,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_17_8" id="__nav_2_17_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_17_9" id="__nav_2_17_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_17_8">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -21940,7 +22159,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_12" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -21962,14 +22181,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_17_11" id="__nav_2_17_11_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_17_12" id="__nav_2_17_12_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_17_11">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_12">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -22185,7 +22404,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_13" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -22207,14 +22426,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_17_12" id="__nav_2_17_12_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_17_13" id="__nav_2_17_13_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_17_12">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_13">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -22316,7 +22535,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_14" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -22338,14 +22557,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_17_13" id="__nav_2_17_13_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_17_14" id="__nav_2_17_14_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_17_13">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_14">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -22449,7 +22668,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_16" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -22471,14 +22690,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_17_15" id="__nav_2_17_15_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_17_16" id="__nav_2_17_16_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_17_15">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_16">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -22582,7 +22801,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_16" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_17" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -22604,14 +22823,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_17_16" id="__nav_2_17_16_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_17_17" id="__nav_2_17_17_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_17_16">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_17">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -22803,7 +23022,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_20" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_21" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -22825,14 +23044,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_17_20" id="__nav_2_17_20_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_17_21" id="__nav_2_17_21_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_17_20">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_21">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -22956,10 +23175,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_20_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_21_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_17_20_5" id="__nav_2_17_20_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_17_21_5" id="__nav_2_17_21_5_label" tabindex="0">
             
   
   
@@ -22977,8 +23196,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_17_20_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_17_20_5">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_17_21_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_21_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -23195,164 +23414,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GWC SQLite Plugin
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GWC SQLite Plugin
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mbtiles-blob-store" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MBTiles Blob Store
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="MBTiles Blob Store">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-path-templates" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        File Path Templates
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mbtiles-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MBTiles Metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expiration-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Expiration Rules
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eager-truncate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eager Truncate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration Example
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#replace-operation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Replace Operation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -30257,77 +30318,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mbtiles-blob-store" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        MBTiles Blob Store
+        Installation
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="MBTiles Blob Store">
+    <nav class="md-nav" aria-label="Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#file-path-templates" class="md-nav__link">
+  <a href="#installing-with-docker" class="md-nav__link">
     <span class="md-ellipsis">
       
-        File Path Templates
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mbtiles-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MBTiles Metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expiration-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Expiration Rules
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eager-truncate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eager Truncate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration Example
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#replace-operation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Replace Operation
+        Installing with Docker
       
     </span>
   </a>
@@ -30336,6 +30342,122 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-the-feed-is-checked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the feed is checked
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dismissing-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dismissing notifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppressing-mitigated-advisories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppressing mitigated advisories
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-and-check-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status and Check Now
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REST endpoint
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="REST endpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suppressing-advisories-in-a-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suppressing advisories in a request
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
   
 </li>
       
@@ -30356,7 +30478,7 @@
 
 
   
-    <a href="https://github.com/geoserver/geoserver/edit/main/doc/en/user/community/gwc-sqlite/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/geoserver/geoserver/edit/main/doc/en/user/community/updates-checker/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -30364,119 +30486,257 @@
   
 
 
-<h1 id="gwc-sqlite-plugin">GWC SQLite Plugin<a class="headerlink" href="#gwc-sqlite-plugin" title="Permanent link">&para;</a></h1>
-<p>This plugin provides integration with GWC SQLite based blob stores. At the moment only one blob store of this type is available, the MBTiles blob store.</p>
-<h2 id="mbtiles-blob-store">MBTiles Blob Store<a class="headerlink" href="#mbtiles-blob-store" title="Permanent link">&para;</a></h2>
-<p>This blob store allow us to store tiles using the <a href="https://github.com/mapbox/mbtiles-spec/blob/master/1.1/spec.md">MBTiles</a> specification (version 1.1) which defines a schema for storing tiles in an <a href="https://www.sqlite.org/">SQLite</a> database with some restrictions regarding tiles formats and projections.</p>
-<p>MBTiles specification only supports JPEG and PNG formats and projection EPSG:3857 is assumed. The implemented blob store will read and write MBTiles files compliant with the specification but will also be able to write and read MBTiles files that use others formats and projections.</p>
-<p>Using the MBTiles blob store will bring several benefits at the cost of some performance loss. The MBTiles storage uses a significantly smaller number of files, which results in easier data handling (e.g., backups, moving tiles between environments). In some cases the stored data will be more compact reducing the size of the data on disk.</p>
-<p>When compared to the file blob store this store has two limitations:</p>
+<h1 id="check-for-updates">Check for Updates<a class="headerlink" href="#check-for-updates" title="Permanent link">&para;</a></h1>
+<p>The Check for Updates community module tells administrators, on the GeoServer landing page, when the GeoServer they are running
+needs attention. It reads a small JSON feed that is published in the GeoServer GitHub repository, and reports:</p>
 <ul>
-<li>This store does not integrate with disk quota, this is a consequence of using database files.</li>
-<li><strong>This store cannot be shared among several GeoWebCache instances.</strong></li>
+<li>a newer patch release in the running series</li>
+<li>that the running series has moved to maintenance, or is no longer supported</li>
+<li>a newer release that the <a href="https://geoserver.org/blog/">geoserver.org/blog</a> announcement marks as a security release, or that came out together with other
+  series, which usually means a security release</li>
+<li>a published security advisory that applies to the running version</li>
 </ul>
+<p>The module only ever downloads the feed. It never reports the running version or anything else about the GeoServer it is installed on. The
+feed is a static file on GitHub, downloaded from <code>raw.githubusercontent.com</code> (see <strong>Feed URL</strong> below for an alternative
+host). The GeoServer team does not run these hosts, receives no request logs at all and cannot see which GeoServer
+versions are running. The download is an ordinary web request, so the feed host can see the public IP address of the
+server making it.</p>
+<p><img alt="Status" src="status.png" /></p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>As a community module, the package needs to be downloaded from the <a href="https://build.geoserver.org/geoserver/main/community-latest/">nightly
+builds</a> - search for <code>updates-checker-plugin.zip</code>.</p>
+<p>Unpack the zip file contents into GeoServer's <code>WEB-INF/lib</code> directory and restart GeoServer.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If disk quota is activated the stored stats will not make much sense and will not reflect the actual disk usage, the size of the database files cannot be really controlled.</p>
+<p>The module is compiled for Java 11. This JAR declares the module category, which GeoServer 3.0 introduced, so it is for GeoServer 3.0 and later. For GeoServer 2.23 to 2.28, take the JAR of the 2.28.x or 2.27.x community build: it is the same module without the category, and it can be copied into a server that is already running in production without rebuilding it.</p>
 </div>
-<p>Database files cannot be managed as simple files. When connections to a database are open the associated file should not be deleted, moved or switched or the database file may become corrupted. Databases files can also become fragmented after deleting an huge amount of data or after frequent inserts, updates or delete operations.</p>
-<h3 id="file-path-templates">File Path Templates<a class="headerlink" href="#file-path-templates" title="Permanent link">&para;</a></h3>
-<p>An MBTiles file will correspond to an SQLite database file. In order to limit the amount of contention on each single database file users will be allowed to decide the granularity of the databases files. When GeoWebCache needs to map a tile to a database file it will only look at the databases files paths, it will not take in account the MBTiles metadata (this is why this store is able to handle others formats and projections).</p>
-<p>To configure the databases files granularity the user needs to provide a file path template. The default file path template for the MBTiles blob store is this one:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{layer}/{grid}{format}{params}/{z}-{x}-{y}.sqlite
+<h3 id="installing-with-docker">Installing with Docker<a class="headerlink" href="#installing-with-docker" title="Permanent link">&para;</a></h3>
+<p>To run the GeoServer Docker image with the module installed, pass it as a community extension:</p>
+<p>3.0.2 example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker run -it -p 8080:8080 \
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  --env INSTALL_EXTENSIONS=true \
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  --env COMMUNITY_EXTENSIONS="updates-checker" \
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  docker.osgeo.org/geoserver:3.0.2
 </code></pre></div>
-<p>This file template will stores all the tiles belonging to a certain layer in a single folder that will contain sub folders for each given format, projection and set of parameters and will group tiles with the same zoom level, column range and row range in a SQLite file. The column and row range values are passed by configuration, by default those values are equal to 250. The provided files paths templates will always be considered relative to the root directory provided as a configuration option.</p>
-<p>Follows an example of what the blob store root directory structure may look like when using the default path template:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>.
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>|-- nurc_Pk50095
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>|   `-- EPSG_4326image_pngnull
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>|       |-- 11_2000_1500.sqlite
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>|       `-- 12_4250_3000.sqlite
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>`-- topp_states
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    |-- EPSG_900913image_jpeg7510004a12f49fdd49a2ba366e9c4594be7e4358
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    |   |-- 6_250_500.sqlite
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    |   `-- 7_0_0.sqlite
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    `-- EPSG_900913image_jpegnull
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        |-- 3_500_0.sqlite
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        |-- 4_0_250.sqlite
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        `-- 8_750_500.sqlite
-</code></pre></div>
-<p>If no parameters were provided <em>null</em> string will be used. Is the responsibility of the user to define a file path template that will avoid collisions.</p>
-<p>The terms that can be used in the file path template are:</p>
+<h2 id="when-the-feed-is-checked">When the feed is checked<a class="headerlink" href="#when-the-feed-is-checked" title="Permanent link">&para;</a></h2>
+<p>The feed is fetched at most once per administrator session, plus once at server startup and whenever <strong>Check Now</strong> or the REST endpoint is used. There is no timer.</p>
 <ul>
-<li><strong>grid</strong>: the grid set id</li>
-<li><strong>layer</strong>: the name of the layer</li>
-<li><strong>format</strong>: the image format of the tiles</li>
-<li><strong>params</strong>: parameters unique hash</li>
-<li><strong>x</strong>: column range, computed based on the column range count configuration property</li>
-<li><strong>y</strong>: row range, computed based on the row range count configuration property</li>
-<li><strong>z</strong>: the zoom level</li>
+<li><strong>First view of a session:</strong> the first time an administrator opens the landing page, the page
+  loads at once and the feed is fetched in the background. The banner appears in place a moment later.</li>
+<li><strong>Later views in the same session:</strong> the banner is drawn from what the server already holds, with no new download.</li>
+<li><strong>Startup:</strong> a short background thread makes one download, so an unreachable feed can never delay server startup.</li>
+<li>A failed download is not retried. The last good copy is kept and used.</li>
 </ul>
-<p>It is also possible to use parameters values, like <em>style</em> for example. If the parameter is not present <em>null</em> will be used.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Characters <code>and `/` can be used as path separator, they will be translated to the operating system specific one (</code> for Linux and <code>/</code> for Windows). Any special char like <code>`,</code>/<code>,</code>:` or empty space used in a term value will be substituted with an underscore.</p>
-</div>
-<h3 id="mbtiles-metadata">MBTiles Metadata<a class="headerlink" href="#mbtiles-metadata" title="Permanent link">&para;</a></h3>
-<p>A valid MBTiles file will need some metadata, the image format and layer name will be automatically added when an MBTiles file is created. The user can provide the remaining metadata using a properties file whose name must follow this pattern:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;layerName&gt;.metadata
+<p>Only full administrators (holders of the <code>ROLE_ADMINISTRATOR</code> role) see the banner or trigger a download. Workspace administrators and other users do not.</p>
+<h2 id="configuring">Configuring<a class="headerlink" href="#configuring" title="Permanent link">&para;</a></h2>
+<p>Once installed, the module adds a <strong>Check for Updates</strong> page under the <strong>About &amp; Status</strong> (GeoServer 2) or <strong>GeoServer</strong> (GeoServer 3) menu.</p>
+<p><img alt="GeoServer 2 menu" src="menu-gs2.png" /> </p>
+<p><img alt="GeoServer 3 menu" src="menu.png" /></p>
+<p>Below the Status section are these settings:</p>
+<ul>
+<li><strong>Feed URL</strong> - where the feed is fetched from. Read-only in the GUI. To use a different feed, for
+  example an internal mirror, set the <code>UPDATES_CHECKER_FEED_URL</code> <a href="../../configuration/properties/">application
+  property</a> as a Java system property
+  (<code>-DUPDATES_CHECKER_FEED_URL=https://raw.githubusercontent.com/geoserver/geoserver/updates-checker-v1/versions.json</code>), a web application context parameter, or an
+  environment variable. If <code>raw.githubusercontent.com/</code> is blocked by your organisation, try the jsDelivr copy of the default feed:
+  <code>https://cdn.jsdelivr.net/gh/geoserver/geoserver@updates-checker-v1/versions.json</code>.</li>
+<li><strong>Suppressed advisories</strong> - read-only, empty by default. The security advisories (CVE or GHSA ids) that the server
+  administrator has mitigated and does not want reported. They are set outside GeoServer, see
+  <a href="#suppressing-mitigated-advisories">Suppressing mitigated advisories</a>.</li>
+<li><strong>Enable update check at login and startup</strong> - on by default. When off, only <strong>Check Now</strong> and the REST endpoint work.</li>
+<li><strong>Write check results to logs</strong> - on by default. Writes one line to the GeoServer log for each check (at startup, on
+  the first view of a session and on Check Now) with the result and the versions. Failures to
+  download or read the feed are always logged at WARN, whatever this setting says.</li>
+<li><strong>Hide version numbers in logs</strong> - off by default. Leaves version numbers out of
+  the per-check result lines. The banner and the Status section always show them, and failure lines are not affected.</li>
+</ul>
+<p>The settings are saved in <code>updates-checker/updates-checker.xml</code> in the data directory.</p>
+<h2 id="feed">Feed<a class="headerlink" href="#feed" title="Permanent link">&para;</a></h2>
+<p>The feed is built every 15 minutes by the <a href="https://github.com/geoserver/geoserver/blob/main/.github/workflows/updates-checker.yml">Updates Checker feed</a>
+workflow, from these public sources:</p>
+<ul>
+<li><code>geoserver/geoserver/security/advisories</code></li>
+<li><code>geoserver/geoserver/releases</code></li>
+<li><code>geoserver/geoserver.github.io/_posts</code></li>
+</ul>
+<p>The generator and its tests are in <code>.github/workflows/updates-checker/</code>. The result is committed to the
+<code>updates-checker-v1</code> branch and published at:</p>
+<ul>
+<li>https://raw.githubusercontent.com/geoserver/geoserver/updates-checker-v1/versions.json</li>
+<li>https://cdn.jsdelivr.net/gh/geoserver/geoserver@updates-checker-v1/versions.json (for networks that block <code>raw.githubusercontent.com</code>)</li>
+</ul>
+<h2 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">&para;</a></h2>
+<p>When several notifications apply, the banner shows the most important one and a link "N more notices" to the Check for Updates page. Order is by severity, and within one
+severity security notices come first, then patches, then series notices.</p>
+<table>
+<thead>
+<tr>
+<th>Notification</th>
+<th>Severity</th>
+<th>Meaning</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confirmed security advisory</td>
+<td>CRITICAL, HIGH, WARN or INFO, as per the advisory</td>
+<td>An advisory applies to the running version</td>
+<td>CRITICAL: <strong>Remind me tomorrow</strong>. Others: <strong>Dismiss</strong></td>
+</tr>
+<tr>
+<td>Advisory could not be checked</td>
+<td>As per the advisory</td>
+<td>The advisory's version range could not be read, so it needs a manual look</td>
+<td><strong>Dismiss</strong></td>
+</tr>
+<tr>
+<td>Security release</td>
+<td>HIGH when announced as a security release, WARN when only released together with other series</td>
+<td>A release newer than the running version, in the running series, is a security release or probably one. The notice names that release and the version to upgrade to, and its Details link is the announcement. It replaces the newer patch notice</td>
+<td><strong>Remind me tomorrow</strong>, <strong>Dismiss</strong></td>
+</tr>
+<tr>
+<td>Newer patch</td>
+<td>WARN</td>
+<td>A newer patch exists in the running series</td>
+<td><strong>Remind me tomorrow</strong>, <strong>Dismiss for version X.Y.Z</strong></td>
+</tr>
+<tr>
+<td>Series in maintenance</td>
+<td>NOTICE</td>
+<td>A newer stable series exists</td>
+<td><strong>Remind me in 30 days</strong>, <strong>Dismiss until next series</strong></td>
+</tr>
+<tr>
+<td>Series unsupported</td>
+<td>WARN</td>
+<td>The series is beyond community support, or too old for the feed to cover</td>
+<td>none, always shown</td>
+</tr>
+<tr>
+<td>Feed unavailable</td>
+<td>WARN</td>
+<td>The feed could not be downloaded and there is no earlier copy</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Feed schema too new</td>
+<td>WARN</td>
+<td>The feed is newer than this module understands: update the module</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Version unknown</td>
+<td>INFO</td>
+<td>The running version could not be determined, so no check is made</td>
+<td><strong>Dismiss</strong> (this session)</td>
+</tr>
+</tbody>
+</table>
+<p>The feed names the releases of the last 365 days, so a security release older than that is no longer named; the
+advisories still apply.</p>
+<p>A SNAPSHOT, release candidate or milestone build is not compared with released versions, and has no advisories or
+updates to report. It still reports a feed that is unavailable or too new.</p>
+<p>An advisory applies to a version unless that version is at or beyond the first patched version of its own series. An
+advisory whose version range cannot be read is never ignored; it is shown for manual review instead.</p>
+<h2 id="dismissing-notifications">Dismissing notifications<a class="headerlink" href="#dismissing-notifications" title="Permanent link">&para;</a></h2>
+<p>Dismissals are stored in the administrator's own browser (<code>localStorage</code>), not on the server. A dismissal stops applying as soon as a newer version, series or advisory is involved, so
+it never silently hides a later one. A CRITICAL confirmed advisory can only be snoozed for a day, never dismissed for
+good.</p>
+<p>Because the choice lives in the browser, it applies to that browser and that address only: an administrator on another
+device, under another host name, or in a private window sees the notifications again.</p>
+<h2 id="suppressing-mitigated-advisories">Suppressing mitigated advisories<a class="headerlink" href="#suppressing-mitigated-advisories" title="Permanent link">&para;</a></h2>
+<p>If you have mitigated a security advisory without upgrading, for example with a firewall rule or by disabling the
+affected service, you can stop the module reporting it. Set the <code>UPDATES_CHECKER_SUPPRESSED_CVES</code> <a href="../../configuration/properties/">application
+property</a> to the ids, separated by commas, semicolons or spaces, as a Java system property
+(<code>-DUPDATES_CHECKER_SUPPRESSED_CVES="CVE-2026-76904,GHSA-aaaa-bbbb-cccc"</code>), a web application context parameter, or an
+environment variable. Both CVE and GHSA ids are accepted, in any case; entries that are not ids are ignored, and at most 100 are used.</p>
+<p>Because the property belongs to whoever starts the server, a GeoServer administrator cannot change it from the web interface.
+The <strong>Suppressed advisories</strong> box on the settings page only shows it.</p>
+<ul>
+<li>A suppressed advisory is left out of the banner, the Status section and the REST response, and no longer makes the
+  check report an update.</li>
+<li>The Status section says that advisories are suppressed and names the ones that apply to your version, so a
+  suppression is never invisible.</li>
+<li>GeoServer writes one WARN line at startup naming the suppressed advisories. Each check line then ends with the number
+  suppressed, for example <code>(1 suppressed)</code>, without the ids.</li>
+<li>Only advisories are affected. A newer release that was announced as a security release is still reported, because
+  the feed does not say which advisories a release fixes.</li>
+</ul>
+<h2 id="status-and-check-now">Status and Check Now<a class="headerlink" href="#status-and-check-now" title="Permanent link">&para;</a></h2>
+<p>The <strong>Status</strong> section on this page shows what GeoServer version is running, when the feed was last checked, and every active
+notification. It is filled from the server's copy when the page opens. The notifications have the same actions as the Welcome page
+banner, and the ones dismissed in this browser are hidden. The link "Clear previous N dismissals" at the bottom brings
+them back.</p>
+<p><strong>Check Now</strong> downloads the feed straight away and refreshes the Status section.</p>
+<p><img alt="Status" src="status.png" /></p>
+<h2 id="rest-endpoint">REST endpoint<a class="headerlink" href="#rest-endpoint" title="Permanent link">&para;</a></h2>
+<p><code>POST /rest/updates-checker/check</code> performs the same check as <strong>Check Now</strong> (so it downloads the feed every time) and returns the result as JSON:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URGENT_UPDATE_AVAILABLE"</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CVE-2026-76904 (critical): Unauthenticated PostGIS SQL injection"</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">"installedVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.27.0"</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">"newerVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.27.6"</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">"suppressed"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">"suppressedBy"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CVE_CONFIRMED"</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CRITICAL"</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CVE-2026-76904 (critical): Unauthenticated PostGIS SQL injection"</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nt">"discriminator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GHSA-jvpx-6qxg-whgc"</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="nt">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/geoserver/geoserver/security/advisories/GHSA-jvpx-6qxg-whgc"</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">}</span>
 </code></pre></div>
-<p>As an example, to add metadata <code>description</code> and <code>attribution</code> entries to layer <code>tiger_roads</code> a file named <code>tiger_roads.properties</code> with the following content should be present in the metadata directory:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>description=ny_roads
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>attribution=geoserver
+<p><code>status</code> is one of:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>URGENT_UPDATE_AVAILABLE</code></td>
+<td>A critical or high security advisory applies to this version or could not be ruled out, or a newer release is a security release</td>
+</tr>
+<tr>
+<td><code>UPDATE_AVAILABLE</code></td>
+<td>Any other advisory, a newer patch, or a series beyond community support</td>
+</tr>
+<tr>
+<td><code>UP_TO_DATE</code></td>
+<td>Nothing needs action. A series in maintenance, or a development build, still reports this</td>
+</tr>
+<tr>
+<td><code>CHECK_FAILED</code></td>
+<td>The check could not tell: the feed could not be read, its schema is newer than the module understands, or the running version is unknown</td>
+</tr>
+</tbody>
+</table>
+<p><code>message</code> is the most important notification, and <code>notifications</code> lists everything active, most important first.
+<code>suppressed</code> lists the suppressed advisories that apply to this version, and <code>suppressedBy</code> is <code>environment</code> when the
+server's list was used, <code>request</code> when the call supplied its own, and <code>null</code> when nothing was suppressed. Access is controlled by GeoServer's standard <code>/rest</code>
+rules in <code>security/rest.properties</code>, which by default require the administrator role (<code>ROLE_ADMINISTRATOR</code>). Only <code>POST</code> is
+accepted, and the response is always JSON.</p>
+<h3 id="suppressing-advisories-in-a-request">Suppressing advisories in a request<a class="headerlink" href="#suppressing-advisories-in-a-request" title="Permanent link">&para;</a></h3>
+<p>The call accepts an optional JSON body. Its <code>suppressedCves</code> array replaces the server's list, but only for this call:
+the banner, the Status section and later calls are not affected. Leave the body out, or leave out <code>suppressedCves</code>, to use
+the server's list; an empty array suppresses nothing.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl<span class="w"> </span>-u<span class="w"> </span>admin:YOUR_PASSWORD<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">     </span>-d<span class="w"> </span><span class="s1">'{"suppressedCves": ["CVE-2026-76904"]}'</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">     </span>http://localhost:8080/geoserver/rest/updates-checker/check
 </code></pre></div>
-<p>The directory that contains this metadata files is defined by a configuration property.</p>
-<h3 id="expiration-rules">Expiration Rules<a class="headerlink" href="#expiration-rules" title="Permanent link">&para;</a></h3>
-<p>The MBTiles specification don't give information about when a tile was created. To allow expire rules, an auxiliary table is used to store tile creation time. In the presence of an MBTiles file generated by a third party tool it is assumed that the creation time of a tile was the first time it was accessed. This feature can be activated or deactivated by configuration. Note that this will not break the MBTiles specification compliance.</p>
-<h3 id="eager-truncate">Eager Truncate<a class="headerlink" href="#eager-truncate" title="Permanent link">&para;</a></h3>
-<p>When performing a truncate of the cache the store will try to remove the whole database file avoiding to create fragmented space. This is not suitable for all the situations and is highly dependent on the database files granularity. The configuration property <code>eagerDelete</code> allows the user to disable or deactivate this feature which is disabled by default.</p>
-<p>When a truncate request by tile range is received all the databases files that contains tiles that belong to the tile range are identified. If eager delete is set to true those databases files are deleted otherwise a single delete query for each file is performed.</p>
-<h3 id="configuration-example">Configuration Example<a class="headerlink" href="#configuration-example" title="Permanent link">&para;</a></h3>
-<p>Follows as an example the default configuration of the MBTiles store:</p>
-<p><img alt="" src="img/mbtilesBlobStore.png" /></p>
-<p>The <em>rootDirectory</em> property defines the location where all the files produced by this store will be created. The <em>templatePath</em> property is used to control the granularity of the database files (see section above). Properties <em>rowRangeCount</em> and <em>columnRangeCount</em> will be used by the path template to compute tile ranges.</p>
-<p>The <em>poolSize</em> property allows to control the max number of open database files, when defining this property the user should take in account the number open files allowed by the operating system. The <em>poolReaperIntervalMs</em> property controls how often the pool size will be checked to see if some database files connections need to be closed.</p>
-<p>Property <em>eagerDelete</em> controls how the truncate operation is performed (see section above). The property <em>useCreateTime</em> can be used to activate or deactivate the insertion of the tile creation time (see section above). Property <em>executorConcurrency</em> controls the parallelism used to perform certain operations, like the truncate operation for example. Property <em>mbtilesMetadataDirectory</em> defines the directory where the store will look for user provided MBTiles metadata.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Since the connection pool eviction happens at a certain interval, it means that the number of files open concurrently can go above the threshold limit for a certain amount of time.</p>
-</div>
-<h3 id="replace-operation">Replace Operation<a class="headerlink" href="#replace-operation" title="Permanent link">&para;</a></h3>
-<p>As said before, if the cache is running SQLite files cannot be simply switched, first all connections need to be closed. The replace operation was created for this propose. The replace operation will first copy the new file side by side the old one, then block the requests to the old file, close the connections tot he old file, delete the old one, rename the new file to current one, reopen the new db file and start serving requests again. Should be almost instant.</p>
-<p>A REST entry point for this operation is available, it will be possible to submit a ZIP file or a single file along with the request. The replace operation can also use an already present file or directory. When using a directory the directory structure will be used to find the destination of each file, all the paths will be assumed to be relative to the store root directory. This means that is possible to replace a store content with another store content (a seeded one for example) by zipping the second store root directory and send it as a replacement.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When using a local directory or submitting a zip file all the file present in the directory will be considered.</p>
-</div>
-<p>There is four ways to invoke this operation. Follows an example of all those variants invocations using CURL.</p>
-<p>Replace a single file uploading the replacement file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>curl -u admin:geoserver -H 'Content-Type: multipart/form-data'
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  -F "file=@tiles_0_0.sqlite"
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  -F "destination=EPSG_4326/sf_restricted/image_png/null/10/tiles_0_0.sqlite"
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  -F "layer=sf:restricted"
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>  -XPOST 'http://localhost:8080/geoserver/gwc/rest/sqlite/replace'
-</code></pre></div>
-<p>Replace a single file using a file already present on the system:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl -u admin:geoserver -H 'Content-Type: multipart/form-data'
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  -F "source=/tmp/tiles_0_0.sqlite"
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  -F "destination=EPSG_4326/sf_restricted/image_png/null/10/tiles_0_0.sqlite"
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  -F "layer=sf:restricted"
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  -XPOST 'http://localhost:8080/geoserver/gwc/rest/sqlite/replace'
-</code></pre></div>
-<p>Replace multiple files uploading a ZIP file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>curl -u admin:geoserver -H 'Content-Type: multipart/form-data'
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  -F "file=@tiles.zip"
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  -F "layer=sf:restricted"
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  -XPOST 'http://localhost:8080/geoserver/gwc/rest/sqlite/replace'
-</code></pre></div>
-<p>Replace multiple files using a directory already present on the system:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>curl -u admin:geoserver -H 'Content-Type: multipart/form-data'
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  -F "source=/tmp/tiles"
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  -F "layer=sf:restricted"
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  -XPOST 'http://localhost:8080/geoserver/gwc/rest/sqlite/replace'
-</code></pre></div>
-<p>The <em>layer</em> parameter identifies the layer whose associated blob store content should be replaced. The <em>file</em> parameter is used to upload a single file or a ZIP file. The <em>source</em> parameter is used to reference an already present file or directory. The <em>destination</em> parameter is used to define the file that should be replaced with the provided file.</p>
-<p>This are the only valid combinations of this parameters other combinations will ignore some of the provided parameters or will throw an exception.</p>
+<p>A body that is not a JSON object, a <code>suppressedCves</code> that is not an array of CVE or GHSA ids, or a body over 64 KiB is refused with
+HTTP 400.</p>
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>This module is maintained by GeoGuru.Africa. Questions, enhancements and issues can be sent to
+<a href="mailto:gs-updates-checker@geoguru.africa">gs-updates-checker@geoguru.africa</a>.</p>
 
 
 
@@ -30514,7 +30774,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../gwc-mbtiles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: GWC MBTiles layer plugin">
+          <a href="../backuprestore/migration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: What changed between 2.x and 3.x">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -30524,20 +30784,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                GWC MBTiles layer plugin
+                What changed between 2.x and 3.x
               </div>
             </div>
           </a>
         
         
           
-          <a href="../hana/" class="md-footer__link md-footer__link--next" aria-label="Next: SAP HANA">
+          <a href="../cog/" class="md-footer__link md-footer__link--next" aria-label="Next: COG (Cloud Optimized GeoTIFF) Documentation">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                SAP HANA
+                COG (Cloud Optimized GeoTIFF) Documentation
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -30601,10 +30861,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.action.edit", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.footer"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": false, "default": ["latest", "stable", "3.0.x"], "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "content.action.edit", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.footer"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": false, "default": ["latest", "stable", "3.0.x"], "provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../../../../javascripts/hide-empty-toc.js"></script>
       
